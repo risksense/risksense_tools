@@ -1,0 +1,15 @@
+
+platform_url = 'https://platform.risksense.com'
+
+api_key = ''
+
+cmdb_csv_filename = 'csv_file_example.csv'
+
+# Network Type can be 'IP' or 'HOSTNAME'
+network_type = 'IP'
+
+# If you are a single-client user, leave this setting alone.
+# If you are a multiclient user, uncomment setting, and specify the
+# the client ID that you wish to work with.
+
+#client_id = 12345
