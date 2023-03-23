@@ -1,0 +1,4 @@
+toml==0.10.2
+requests==2.27.1
+progressbar2==3.53.1
+rich==10.2.2

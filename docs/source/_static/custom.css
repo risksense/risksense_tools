@@ -1,0 +1,31 @@
+a {
+	color: #FF3333;
+	/*ff671f*/
+  }
+  
+  
+  a:visited {
+	color: #FF3333;
+  }
+  
+  .wy-side-nav-search, .wy-nav-top {
+	color: black;
+	background: white;
+  }
+
+
+
+
+  
+  .wy-menu-vertical li.toctree-l2.current li.toctree-l3.current>a {
+	color: white;
+	background: #FF3333;
+  }
+
+  .wy-menu-vertical li.toctree-l1.current>a,
+  .wy-menu-vertical li.toctree-l2.current>a,
+  .wy-menu-vertical li.toctree-l3.current>a{
+	color: white;
+	background: #FF3333;
+  }
+
