@@ -1,0 +1,23 @@
+# Update to reflect the URL you use when logging in to RiskSense
+
+platform_url = ''
+
+
+#  An API key generated for your user. This key will have the
+#  same permissions as your user. Instructions for generating
+#  an API key are found at:
+#  https://help.risksense.com/generating-an-api-token
+
+api_key = ''
+
+cherwell_url=""
+
+cherwell_name=""
+
+cherwell_username=""
+
+cherwell_password=""
+
+cherwell_clientidkey= ""
+
+client_id = 0

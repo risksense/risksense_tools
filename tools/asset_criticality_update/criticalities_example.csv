@@ -1,0 +1,2 @@
+ec2_identifier,netbios,ip_address,hostname,fqdn,dns,mac_addr,scanner_specific_unique_id,criticality
+,win-3qr3o26kt93,192.168.0.63,win-3qr3o26kt93,WIN-3QR3O26KT93,,8A:F6:0A:EE:36:C8,,2

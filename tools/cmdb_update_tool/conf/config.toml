@@ -1,0 +1,33 @@
+
+# Update to reflect the URL you use when logging in to RiskSense
+
+platform_url = 'https://platform2.risksense.com'
+
+
+#  An API key generated for your user. This key will have the
+#  same permissions as your user. Instructions for generating
+#  an API key are found at:
+#  https://help.risksense.com/generating-an-api-token
+
+api_key = ''
+
+
+#  The name of the file you would like the script to read to
+#  get the desired CMDB values for each host.
+
+cmdb_csv_filename = 'csv_file_example.csv'
+
+
+#  Update to reflect whether the hosts in the .csv file are
+#  identified by asset uniqueness field in the csv file.s Valid options are
+#  either 'IP' or 'HOSTNAME' or 'MIXED'.
+
+network_type = 'MIXED'
+
+
+#  If you are a single-client user, leave this setting alone.
+#  If you are a multiclient user, uncomment the client_id
+#  setting below, and specify the # the client ID that you
+#  wish to work with.
+
+client_id = 793

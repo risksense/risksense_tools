@@ -1,0 +1,14 @@
+platform_url = ''
+api_key=""
+username=''
+password=""
+client_id=123
+connector_name=""
+networkId=
+connector_url=""
+schedule_enabled=true
+schedule_type=""
+hourOfDay=0
+dayofmonth=""
+dayofweek=""
+autoUrba=true

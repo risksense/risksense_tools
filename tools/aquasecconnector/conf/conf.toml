@@ -1,0 +1,27 @@
+
+platform_url = 'https://platform.risksense.com'                             
+#your platform URL
+api_key=""                                    
+#API key of the user in the platform
+client_id=123                                   
+#client id
+connector_name=""                             
+#name of the connector you want to provide
+networkId=123                                  
+#network to which you want to ingest the assets
+#aquasec username and password
+aquasec_username=""
+aquasec_password=""
+
+
+#whether to create assets if 0 vuln is there
+connector_url=""                              
+# url of the connector
+schedule_enabled=true                         
+#whether to enable schedule
+schedule_type="DAILY"                         
+#whether daily monthly or weekly
+hourOfDay=0                                   
+#hour of the day
+autoUrba=true                                 
+#whether to enable auto urba
