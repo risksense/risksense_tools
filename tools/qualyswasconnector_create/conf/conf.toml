@@ -1,0 +1,20 @@
+platform_url = 'https://xxx.risksense.com'
+api_key=''
+client_id=123
+connector_name=""
+reportNamePrefix =""
+networkId=123
+username="{qualysusername}"
+password="{qualyspassword}"
+connector_url="{qualysurl}"
+schedule_enabled=true
+schedule_type="DAILY"
+
+hourOfDay=2
+
+#dayofmonth="2"
+
+#dayofweek="3"
+
+autoUrba=false
+

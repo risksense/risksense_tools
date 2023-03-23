@@ -1,0 +1,18 @@
+platform_url = 'https://xxxx.risksense.com'
+api_key=''
+client_id=123
+
+### Provide the url which will be used to create delivery channel , the rest besides the necessary delivery channel should be empty also a channel name
+slackwebookurl=""
+outlookwebhookurl=""
+email=""
+channelname=''
+
+### If need to delete a delivery channel , please provide a list of the delivery channels to delete and set delete channel as true
+deletechannel=true
+channelstodeleteid=[1]
+
+### If need to disable a delivery channel , please provide the delivery channel to disable and set disable channel as true
+
+channelidtodisable=1
+disablechannel=false

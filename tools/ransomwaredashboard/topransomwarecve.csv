@@ -1,0 +1,6 @@
+assetsimpacted,findings,cvename,ransomwareFamilies
+2,2,CVE-2013-4786,HPE iLO
+1,1,CVE-2021-44228,"Conti,Khonsari,Night Sky,TellYouThePass"
+1,1,CVE-2017-0148,"Satan,Conti,Petya,QNAPCrypt,WannaCry,Ryuk,UIWIX"
+1,1,CVE-2017-0147,"Conti,Crypsam (SamSam),None,QNAPCrypt,UIWIX,WannaCry,Satan,Bad Rabbit,Katyusha,Petya,wannacry,Ryuk"
+1,1,CVE-2017-0146,"Conti,Crypsam (SamSam),QNAPCrypt,UIWIX,Satan,Bad Rabbit,Katyusha,Petya,wannacry,WannaCry,Ryuk"

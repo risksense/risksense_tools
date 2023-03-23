@@ -1,0 +1,11 @@
+platform_url = 'https://platform.risksense.com'
+api_key=''
+client_id=1234
+vrrCriticalMax= 9.1
+vrrHighMax= 7.1
+vrrMediumMax= 5.1
+vrrLowMax= 2.1
+findingCount= 4
+assetType= "External"
+assetCriticality= 3
+assetCategory= "Host"

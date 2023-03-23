@@ -1,0 +1,13 @@
+platform_url = ''
+api_key=""
+client_id=123
+connector_name=""
+networkId=123
+username="{nexposeusername}"
+password="{nexposepassword}"
+reportNamePrefix= ""
+connector_url="{nexposeurl}"
+schedule_enabled=true
+schedule_type="DAILY"
+hourOfDay=0
+autoUrba=false

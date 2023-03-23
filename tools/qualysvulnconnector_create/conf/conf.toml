@@ -1,0 +1,30 @@
+
+platform_url = 'https://platform-in.risksense.com'
+
+api_key=""
+
+client_id=100
+
+connector_name="qualys test"
+
+reportNamePrefix = "test"
+
+networkId=155162
+
+username=""
+
+password=""
+
+connector_url=""
+
+schedule_enabled=true
+
+schedule_type="DAILY"
+
+hourOfDay=2
+
+dayofmonth="2"
+
+dayofweek="3"
+
+autoUrba=false
