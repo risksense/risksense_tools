@@ -1,0 +1,37 @@
+platform_url = 'https://platform.risksense.com'
+api_key=''
+client_id=1234
+slaname="test sla"
+sladescription="Applies to all Finding."
+slamatrix={"1"=[45,90,90,120,0],"2"=[30,90,90,120,0],"3"=[21,45,90,120,0],"4"=[14,30,90,120,0],"5"=[7,21,90,120,0]}
+defaultpriority=3
+grouppriority=2
+actionType="REMEDIATION_SLA"
+isdefaultSLA = false
+inputdata="HOST_FINDING"
+updateSLAIfVRRUpdates=true
+affectOnlyNewFindings=false
+Targetgroupids="1234,123"
+playbookuuid=""
+
+#uncomment the right sla operator
+sladataoperator="MET_SLA"
+#sladataoperator="OVERDUE"
+#sladataoperator="MISSED_SLA"
+#sladataoperator="WITHIN_SLA"
+
+
+#uncomment the right slamatrixtype
+slaMatrixProfileType="STANDARD"
+#slaMatrixProfileType="AGGRESSIVE"
+#slaMatrixProfileType="ACCELERATED"
+#slaMatrixProfileType="CUSTOM"
+
+
+# uncomment the right time reference
+timeReference = "INGESTION_DATE"
+# timeReference = "DISCOVERED_DATE"
+
+# uncomment the right offset basis 
+offsetbasis="VRR"
+# offsetbasis="SEVERITY"

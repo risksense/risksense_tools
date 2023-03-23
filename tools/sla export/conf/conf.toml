@@ -1,0 +1,11 @@
+platform_url = 'https://platform.risksense.com'
+api_key=''
+client_id=1234
+slaname="test"
+filename = "testing"
+
+#uncomment the right sla operator
+#sladataoperator="MET_SLA"
+sladataoperator="OVERDUE"
+#sladataoperator="MISSED_SLA"
+#sladataoperator="WITHIN_SLA"
