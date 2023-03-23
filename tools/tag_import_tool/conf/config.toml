@@ -1,0 +1,22 @@
+
+# Update to reflect the URL you use when logging in to RiskSense
+platform_url = 'https://platform.risksense.com'
+
+
+#  An API key generated for your user. This key will have the
+#  same permissions as your user. Instructions for generating
+#  an API key are found at:
+#  https://help.risksense.com/generating-an-api-token
+api_key = ''
+
+
+#  The .csv file to read to get the parameters for each
+#  new tag to be created.
+tag_csv_filename = 'csv_file_example.csv'
+
+
+# If you are a single-client user, leave this setting alone.
+# If you are a multiclient user, uncomment setting, and specify the
+# the client ID that you wish to work with.
+
+#client_id = 12345

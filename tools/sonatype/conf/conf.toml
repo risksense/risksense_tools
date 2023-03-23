@@ -1,0 +1,31 @@
+
+platform_url = 'https://platformxxx.risksense.com'
+api_key=""
+client_id=123
+connector_name="testing"
+networkId=123                     
+#your platform URL
+sonatype_username=""
+sonatype_password=""  
+Taginfotobepulled=true        
+createAssetsIfZeroVulnFoundInFile=true
+
+#Please provide any of the following options: "ALL","SELECTED","NEGATED"
+nexusAPIToPullApplicationFilter="ALL"
+
+#Please provide any of the following options: "ALL","SELECTED","NEGATED"
+nexusAPIToPullStageFilter="ALL"
+#API key of the user in the platform
+
+
+#client id
+connector_url=""                           
+# url of the connector
+schedule_enabled=true                         
+#whether to enable schedule
+schedule_type="DAILY"                         
+#whether daily monthly or weekly
+hourOfDay=3                                   
+#hour of the day
+autoUrba=true        
+#whether to enable auto urba
