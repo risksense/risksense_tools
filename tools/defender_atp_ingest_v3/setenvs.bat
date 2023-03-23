@@ -1,0 +1,5 @@
+setx RS_API_KEY "11ebc449-6084-a665-9948-02a87de7e1ee:UHBNU0BrJnMxXkFMb0Q3YXgqdWtseG0tdXpWJWgyISRUZFZnb3RXIXp1YmcqdXlqX2NMdCF6dmojMGNiQWwyYg=="
+setx DEF_TOKEN_URL "defender.token.url"
+setx DEF_TEN_ID "defender.tenanid"
+setx DEF_CLIENT_ID "defender.clientid"
+setx DEF_CLIENT_SECRET "defender.client.secret"

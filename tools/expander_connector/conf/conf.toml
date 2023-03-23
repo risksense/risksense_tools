@@ -1,0 +1,12 @@
+platform_url = ''
+api_key=""
+client_id=1234
+connector_name=""
+networkId=123
+expander_username=""
+expander_password=""
+connector_url=""
+schedule_enabled=false
+schedule_type="DAILY"
+hourOfDay=0
+autoUrba=false

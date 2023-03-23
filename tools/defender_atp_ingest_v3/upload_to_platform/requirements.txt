@@ -1,0 +1,4 @@
+progressbar2==3.39.2
+urllib3==1.26.5
+requests==2.21.0
+toml==0.10.0

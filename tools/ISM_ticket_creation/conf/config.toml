@@ -1,0 +1,19 @@
+[platform]
+    "url" = 'https://platform.risksense.com' # Add the url of the platform
+    "api_key" = ''  # Add your API key here.
+    "client_id" =   # Update to include your client ID here.
+    "file_name" = '' # Not necessary to change/add anything here.
+    "tag_prefix"= '' # Prefix in the tag created in the riksense that the script looks for .
+    "incident_prefix" = '' # Prefix in the tag that will be renamed in the riksense post ticket creation.
+    "tag_owner" = '' # Valid Owner(userid) who will be changing the tag name post ticket creation.
+	
+	
+[ISM]
+	"ism_url" = 'https://ism-csmriptide-tenant1.ivanticlouddev.com/api/odata/businessobject/incidents'
+	"ism_attachment_url" = 'https://ism-csmriptide-tenant1.ivanticlouddev.com/api/rest/Attachment'
+	"ism_key" = '' # ism API Key
+	"assignee_prefix" = '' # Prefix in the tag created in the riksense that the script looks for to assign to a person.
+	"default_assignee"= '' # Assignee to whom the ticket would be assigned , if the script doesn't find any assignee's name in the created tag.
+	"profile_link"= '' # Profile link of a user in ISM(depends on user who is creating tickets)
+	
+	

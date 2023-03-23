@@ -1,0 +1,36 @@
+Version 0.0:
+
+Original version from RiskSense.
+
+_____________________________________________
+
+Version 1.0.0:
+
+Modifications to counter 401 Error.
+
+Details:-
+
+Received 401 error as the API key being
+used had restricted access to Defender data.
+Changes were made to handle the error so
+information fetched within API key bounds
+is fetched and returned.
+
+______________________________________________
+
+Version 2.0.0:
+
+Modifications to factor in Hosts Info without CVEs
+with Dummy Plugin IDs.
+
+______________________________________________
+
+Version 3.0.0:
+
+Modifications to resolve optimization issues.
+
+______________________________________________
+
+Version 3.0.1:
+This version only write output where Health Status is 'Active' and Assets has at least 1 Vulnerability
+______________________________________________

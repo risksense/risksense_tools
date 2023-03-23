@@ -1,0 +1,5 @@
+[RS_Platform_Configuration]
+	platform = "https://platform.risksense.com" # Risksense Platform needs to be filled
+	clientID = 1234        # Client ID in RiskSense Platform needs to be filled
+	apiToken = ""         # API token of RiskSense Platform accont needs to be filled	
+	ITSMConnectorName = ""     # Configured Ivanti ITSM connector name in RS Platform	
