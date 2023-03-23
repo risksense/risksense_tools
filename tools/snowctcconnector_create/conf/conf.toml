@@ -1,0 +1,10 @@
+platform_url = 'https://xxxx.risksense.com'
+api_key=''
+client_id=123
+connector_name=""
+connector_url=""
+username=""
+password=""
+tablename= ""
+statusfield= ""
+ticketidfield=""
