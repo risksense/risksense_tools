@@ -1,9 +1,0 @@
-numpy==1.22.2
-pandas==1.4.1
-jsons
-requests==2.26.0
-zipfile36==0.1.3
-pybase64
-python-time==0.3.0
-logging
-
