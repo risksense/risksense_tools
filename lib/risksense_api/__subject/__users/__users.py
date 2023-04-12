@@ -1397,7 +1397,7 @@ class Users(Subject):
             client_id = self._use_default_client_id()[0]
 
         url = self.api_base_url + "client/{}/user/importUsersCsv".format(str(client_id))
-        upload_file = {'csvdata': (file_name, open(absolute_path_file, 'rb'))}
+        upload_file = {'csvUsers': (file_name, open(absolute_path_file, 'rb'))}
 
         try:
             raw_response = self.request_handler.make_request(ApiRequestHandler.POST, url, files=upload_file)
@@ -1413,9 +1413,8 @@ class Users(Subject):
              exit()
 
         jsonified_response = json.loads(raw_response.text)
-        file_id = jsonified_response[0]['id']
 
-        return file_id
+        return jsonified_response
 
 
 
