@@ -714,6 +714,141 @@ class Applications(Subject):
 
         return job_id
 
+    def application_add_fingerprint(self, application_id:int,fingerprint_url:str,fingerprint_name:str,client_id:int=None)->int:
+
+        """
+        Add Fingerprint for an application
+
+        Args:
+            application_id:  The application to which fingerprint should be added to 
+
+            fingerprint_url: The fingerprint url
+
+            fingerprint_name: The fingerprint name
+
+            client_id:       Client ID.  If an ID isn't passed, will use the profile's default Client ID.
+        
+        Return:
+            The fingerprint ID is returned.
+        
+        Example:
+            
+            To add fingerprint to an application
+            
+            >>> self.{risksenseobject}.applications.application_add_fingerprint(application_id,fingerprint_url,fingerprint_name)
+
+        """
+
+        if client_id is None:
+            client_id = self._use_default_client_id()[0]
+
+        url = self.api_base_url.format(str(client_id)) + f"/{application_id}/fingerprint"
+
+
+        body = {"url":fingerprint_url,"name":fingerprint_name}
+
+
+        try:
+            raw_response = self.request_handler.make_request(ApiRequestHandler.POST, url, body=body)
+        except (RequestFailed,Exception) as e:
+            print('Error in setting address type')
+            print(e)
+            exit()
+
+        jsonified_response = json.loads(raw_response.text)
+        fingerprint_id = jsonified_response['id']
+
+        return fingerprint_id
+
+    def application_add_fingerprint(self, application_id:int,fingerprint_url:str,fingerprint_name:str,client_id:int=None)->int:
+
+        """
+        Add Fingerprint for an application
+
+        Args:
+            application_id:  The application to which fingerprint should be added to 
+
+            fingerprint_url: The fingerprint url
+
+            fingerprint_name: The fingerprint name
+
+            client_id:       Client ID.  If an ID isn't passed, will use the profile's default Client ID.
+        
+        Return:
+            The fingerprint ID is returned.
+        
+        Example:
+            
+            To add fingerprint to an application
+            
+            >>> self.{risksenseobject}.applications.application_add_fingerprint(application_id,fingerprint_url,fingerprint_name)
+
+        """
+
+        if client_id is None:
+            client_id = self._use_default_client_id()[0]
+
+        url = self.api_base_url.format(str(client_id)) + f"/{application_id}/fingerprint"
+
+
+        body = {"url":fingerprint_url,"name":fingerprint_name}
+
+
+        try:
+            raw_response = self.request_handler.make_request(ApiRequestHandler.POST, url, body=body)
+        except (RequestFailed,Exception) as e:
+            print('Error in setting address type')
+            print(e)
+            exit()
+
+        jsonified_response = json.loads(raw_response.text)
+        fingerprint_id = jsonified_response['id']
+
+        return fingerprint_id
+
+    def application_delete_fingerprint(self, application_id:int,fingerprint_ids:str,client_id:int=None)->int:
+
+        """
+        Delete Fingerprint from an application
+
+        Args:
+            application_id:  The application to which fingerprint should be deleted from 
+
+            fingerprint id: The fingerprint ids
+
+            client_id:       Client ID.  If an ID isn't passed, will use the profile's default Client ID.
+        
+        Return:
+            Jsonified response
+        
+        Example:
+            
+            To delete fingerprint from an application
+            
+            >>> self.{risksenseobject}.applications.application_delete_fingerprint(application_id,fingerprint_ids)
+
+        """
+
+        if client_id is None:
+            client_id = self._use_default_client_id()[0]
+
+        url = self.api_base_url.format(str(client_id)) + f"/{application_id}/fingerprint"
+
+
+        body = {"ids":fingerprint_ids}
+
+
+        try:
+            raw_response = self.request_handler.make_request(ApiRequestHandler.DELETE, url, body=body)
+        except (RequestFailed,Exception) as e:
+            print('Error in setting address type')
+            print(e)
+            exit()
+
+        return raw_response
+
+
+
     def edit_application(self,filter:list,name:str,url:str,csvdump:bool=True,client_id:int=None)->int:
 
         """
