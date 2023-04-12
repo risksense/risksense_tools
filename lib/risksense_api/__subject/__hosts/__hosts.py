@@ -159,6 +159,7 @@ class Hosts(Subject):
             "lockCmdb":lockCmdb
         }
 
+
         body = self._strip_nones_from_dict(body)
         body['createCmdb'] = self._strip_nones_from_dict(body['createCmdb'])
         print(body)
@@ -210,6 +211,7 @@ class Hosts(Subject):
              
         return jsonified_response
 
+
     def list_host_filter_fields(self,client_id:int=None)->list:
 
         """
@@ -241,6 +243,51 @@ class Hosts(Subject):
         jsonified_response = json.loads(raw_response.text)
 
         return jsonified_response
+
+    def get_host_trend_information(self,assetids:list,fields:list,includemonthlytrend:bool=True,includeweeklytrend:bool=True,client_id:int=None)->list:
+
+        """
+        Search for trend informatin for host
+
+        Args:
+            client_id:       Client ID.  If an ID isn't passed, will use the profile's default Client ID.
+            assetids:        List of assetids to get trend information
+            fields:          Status fields list , open,closed or both in list
+            includemonthlytrend: Include monthly trend, true to include, false to not
+            includeweeklytrend   Include weekly trend, true to include, false to not
+
+        Return:
+            The JSON output from the platform is returned, listing the jsonified response.
+
+        Examples:
+            >>>  self.{risksenseobject}.hosts.get_host_trend_information(assetids,fields)            
+        """
+
+        if client_id is None:
+            client_id = self._use_default_client_id()[0]
+
+        url = self.api_base_url.format(str(client_id))+'/trend'
+
+        body={
+                "assetIds": assetids,
+                "includeWeeklyTrend": includemonthlytrend,
+                "includeMonthlyTrend": includeweeklytrend,
+                "fields": fields
+                }
+
+        try:
+            raw_response = self.request_handler.make_request(ApiRequestHandler.POST, url,body=body)
+
+        except (Exception) as e:
+                        print()
+                        print('There seems to be an exception')
+                        print(e)
+                        exit()
+
+        jsonified_response = json.loads(raw_response.text)
+
+        return jsonified_response
+
 
     def delete(self, search_filters:list,csvdump:bool=False, client_id:int=None)->int:
 

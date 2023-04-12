@@ -439,6 +439,80 @@ class Networks(Subject):
 
         return response
 
+    def get_available_scanners(self, network_id :int,client_id :int=None)->dict:
+
+        """
+        Get available scanners for a network.
+
+        Args:
+            network_id:  The network ID.
+            client_id:   Client ID.  If an ID isn't passed, will use the profile's default Client ID.
+        
+        Return:
+            The JSON output from the platform is returned, listing the available scanners.
+
+        Examples:
+            >>> apiobj = self.{risksenseobject}.networks.get_available_scanners(networkid)
+        """
+
+        if client_id is None:
+            client_id = self._use_default_client_id()[0]
+
+        url = self.api_base_url.format(str(client_id))+f'/get-available-scanners-for-network/{network_id}'
+        try:
+            raw_response = self.request_handler.make_request(ApiRequestHandler.GET, url)
+
+        except (Exception) as e:
+                        print()
+                        print('There seems to be an exception')
+                        print(e)
+                        exit()
+
+        jsonified_response = json.loads(raw_response.text)
+
+        return jsonified_response
+
+    def fetch_scanner_precedence(self, network_id :int,scanner_uuid :str,scanner_type :str,client_id :int=None)->dict:
+
+        """
+        Fetch scanner precedence for a network.
+
+        Args:
+            network_id:   The network ID.
+            scanner_uuid: Scanner uuid
+            scanner_type: Type of scanner either "HOST" or "APPLICATION"
+            client_id:    Client ID.  If an ID isn't passed, will use the profile's default Client ID.
+        
+        Return:
+            The JSON output from the platform is returned, listing the available scanners.
+
+        Examples:
+            >>> apiobj = self.{risksenseobject}.networks.get_available_scanners(networkid)
+        """
+
+        if client_id is None:
+            client_id = self._use_default_client_id()[0]
+
+        url = self.api_base_url.format(str(client_id))+f'/fetch-applicable-precedence'
+
+        body= {"networkId":network_id,
+               "scannerUuid":scanner_uuid,"ingestingScannerUuid":scanner_uuid,"assetType":scanner_type}
+
+        try:
+            raw_response = self.request_handler.make_request(ApiRequestHandler.POST, url,body=body)
+
+        except (Exception) as e:
+                        print()
+                        print('There seems to be an exception')
+                        print(e)
+                        exit()
+
+        jsonified_response = json.loads(raw_response.text)
+
+        return jsonified_response
+
+
+
     def suggest(self, search_filters :list, suggest_filter :dict, client_id :int=None)->dict:
         """
         Suggest values for filter fields.

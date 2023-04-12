@@ -4,9 +4,9 @@ Role module defined for different role related api endpoints.
 
 """ *******************************************************************************************************************
 |
-|  Name        :  __networks.py
+|  Name        :  __role.py
 |  Module      :  risksense_api
-|  Description :  A class to be used for interacting with RiskSense platform networks.
+|  Description :  A class to be used for interacting with RiskSense platform Roles.
 |  Copyright   :  (c) RiskSense, Inc.
 |  License     :  Apache-2.0
 |
@@ -64,7 +64,7 @@ class Role(Subject):
             The new role ID.
         
         Examples:
-            >>> apiobj = self.{risksenseobject}.users.create('test','test')
+            >>> apiobj = self.{risksenseobject}.role.create('test','test')
         """
         print(name,description)
 
@@ -106,7 +106,7 @@ class Role(Subject):
             Job State
         
         Examples:
-            >>> apiobj = self.{risksenseobject}.users.allow_privileges(1234)
+            >>> apiobj = self.{risksenseobject}.role.allow_privileges(1234)
         """
 
         privlegesids,privilegesnames=self.get_privileges()
@@ -152,7 +152,7 @@ class Role(Subject):
             Job State
         
         Examples:
-            >>> apiobj = self.{risksenseobject}.users.deny_privileges(1234)
+            >>> apiobj = self.{risksenseobject}.role.deny_privileges(1234)
         """
 
         privlegesids,privilegesnames=self.get_privileges()
@@ -196,7 +196,7 @@ class Role(Subject):
             Job State
         
         Examples:
-            >>> apiobj = self.{risksenseobject}.users.delete_privileges(1234)
+            >>> apiobj = self.{risksenseobject}.role.delete_privileges(1234)
         """
 
         privlegesids,privilegesnames=self.get_privileges()
@@ -236,7 +236,7 @@ class Role(Subject):
             (Privilege Id, Privilege Name)
         
         Examples:
-            >>> apiobj = self.{risksenseobject}.users.get_privileges()
+            >>> apiobj = self.{risksenseobject}.role.get_privileges()
         """
 
         if client_id is None:
@@ -275,7 +275,7 @@ class Role(Subject):
             The new role ID.
 
         Examples:
-            >>> apiobj = self.{risksenseobject}.users.update(123,'test','test')
+            >>> apiobj = self.{risksenseobject}.role.update(123,'test','test')
         """
 
         if client_id is None:
@@ -320,7 +320,7 @@ class Role(Subject):
             State(True/False)
 
         Examples:
-            >>> apiobj = self.{risksenseobject}.users.delete_role('xxxx')
+            >>> apiobj = self.{risksenseobject}.role.delete_role('xxxx')
         """
 
         if client_id is None:
